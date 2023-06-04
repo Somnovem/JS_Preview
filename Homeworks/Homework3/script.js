@@ -1,7 +1,10 @@
 var CharacterConfig = {
-    MAX_LVL:15,
+    MAX_LVL:150,
     MAX_HEALTH:15000,
-    EXP_TABLE:[1000,2000,5000,10000,15000,20000,30000,50000,75000,100000,200000,275000,350000,500000,1000000]
+    MAX_MANA:10000,
+    MAX_STAMINA:12500,
+    LEVEL_STEP:100,
+    EXP_MULTIPLICATOR:1.5
 }
 CharacterConfig = Object.freeze(CharacterConfig);
 
@@ -38,7 +41,7 @@ var Character = function(options){
     }
 
     this.setHealth = function(health = 0){
-        if(typeof health !== 'number'){
+        if(typeof health !== 'number' || health > CharacterConfig.MAX_HEALTH || health < 0){
             console.error('setHealth -> invalid data argument')
         }
         else _health = health;
@@ -52,21 +55,21 @@ var Character = function(options){
     }
 
     this.setMana = function(mana = 0){
-        if(typeof mana !== 'number'){
+        if(typeof mana !== 'number' || mana > CharacterConfig.MAX_MANA || mana < 0){
             console.error('setMana -> invalid data argument')
         }
         else _mana = mana;
     }
 
     this.setStamina = function(stamina = 0){
-        if(typeof stamina !== 'number'){
+        if(typeof stamina !== 'number' || stamina > CharacterConfig.MAX_STAMINA || stamina < 0){
             console.error('setStamina -> invalid data argument')
         }
         else _stamina = stamina;
     }
 
     this.addExp = function(exp = 0){
-        if(typeof exp !== 'number'){
+        if(typeof exp !== 'number' || exp < 0){
             console.error('addExp -> invalid data argument')
         }
         else {
@@ -76,8 +79,11 @@ var Character = function(options){
     }
 
     var lvlUp = function(){
-        while(_lvl + 1 < CharacterConfig.MAX_LVL && _exp >= CharacterConfig.EXP_TABLE[_lvl]){
+        while(_lvl + 1 < CharacterConfig.MAX_LVL && _exp >= CharacterConfig.LEVEL_STEP * Math.pow(CharacterConfig.EXP_MULTIPLICATOR,_lvl)){
             ++_lvl;
+            this.setHealth(this.getHealth()*1.03);
+            this.setMana(this.getMana()*1.02);
+            this.setStamina(this.getStamina()*1.02);
         }
     }
 
@@ -106,5 +112,5 @@ var Undead = function (options){
     Undead.prototype = Object.create(Character);
 }
 var arthas = new Undead({health:5000,name:'arthas',mana:10000,stamina:5000,powerOfUndead:4});
-arthas.addExp(2000000);
+arthas.addExp(260000);
 console.log(arthas.getLvl());
