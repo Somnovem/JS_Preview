@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header {
+    text-align: center;
+    padding: 10px;
+    background-color: #f1f1f1;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+}
+
+.list-container {
+    margin: 20px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 300px;
+    text-align: justify;
+}
+
+.list-container p {
+    margin: 15px 3px;
+    border: 1px solid black;
+    padding: 5px 3px;
+}
