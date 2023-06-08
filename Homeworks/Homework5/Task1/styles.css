@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html,body{
+    height: 100%;
+    background-color: antiquewhite;
+}
+
+#myTable{
+    margin: 30px auto;
+}
+
+.pyfTableCell{
+    width: 50px;
+    height: 50px;
+    border: 2px solid #739967;
+    font-size: 26px;
+    font-family: cursive;
+}
+
+.pyfTableHeaderCell{
+    background-color: #9fc84a;
+}
+
+.pyfTableContentCell{
+    background-color: white;
+    color: #739967;
+    text-align: center;
+}
+
+.textWhiteItalic{
+    color: white;
+    font-style: italic;
+}
+
+.active{
+    background-color: black;
+    color: orange;
+}
+
+.lighted{
+    background-color: red !important; 
+    color: yellow;
+}
