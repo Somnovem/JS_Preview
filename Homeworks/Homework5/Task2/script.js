@@ -13,6 +13,20 @@
     }
     ChangeCurrentImage(0);//load the first image
 
+    for(var i = 0; i < imageBlocks.length; ++i){ // now click on an image in the list will open it
+        imageBlocks[i].addEventListener('click',(e)=>{
+            imageBlocks[currentImage].classList.remove('chosenImage');
+            for(var j = 0; j < imageBlocks.length; ++j){
+                if(imageBlocks[j] == e.target){
+                    imageBlocks[j].classList.add('chosenImage');
+                    currentImage = j;
+                    imageView.style.backgroundImage = `url(images/${currentImage+1}.jpg)`;
+                    break;
+                }
+            }
+        });
+    }
+
     var btnPrevImage = document.getElementById('btnPreviousImage');
     btnPrevImage.addEventListener('click',()=>{
         ChangeCurrentImage(-1); //try to go back to the previous image
