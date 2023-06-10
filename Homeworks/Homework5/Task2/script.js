@@ -4,8 +4,8 @@
     var currentImage = 0;
     function ChangeCurrentImage(change){
         if(typeof change !== 'number') console.error('ChangeCurrentImage -> invalid input');
-        if(currentImage == 0 && change < 0)return;
-        if(currentImage == (imageBlocks.length - 1) && change > 0)return;
+        if(currentImage == 0 && change < 0) change = (imageBlocks.length - 1);
+        if(currentImage == (imageBlocks.length - 1) && change > 0) change = (imageBlocks.length - 1)*(-1);
         imageBlocks[currentImage].classList.remove('chosenImage');
         currentImage += change;
         imageBlocks[currentImage].classList.add('chosenImage');
