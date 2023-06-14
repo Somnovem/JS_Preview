@@ -1,0 +1,4 @@
+@keyframes moveObject {
+    0% { right: -200px; }
+    100% { right: 15px; }
+  }
