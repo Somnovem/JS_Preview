@@ -1,0 +1,116 @@
+html, body {
+    height: 100%;
+    background-color: antiquewhite;
+}
+
+body {
+    background: #A7D7C5;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Dubai;
+    gap: 20px;
+}
+
+#regForm {
+    background: whitesmoke;
+    width: 400px;
+    height: 450px;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#top_label,
+#reg_top_label {
+    margin: 25px 5px 5px;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.1rem;
+}
+
+#label_info,
+#reg_label_info{
+    font-weight: 100;
+    text-align: center;
+    width: 80%;
+    margin: 10px 0 0 0;
+    color: red;
+}
+
+#email_adress {
+    margin-top: 25px;
+}
+
+#loginForm input[type="email"],
+#loginForm input[type="password"],
+#loginForm #login,
+#regForm input[type="email"],
+#regForm input[type="password"],
+#regForm #reg_login, 
+#regForm #reg_phone {
+    border: 1px solid lightgray;
+    border-radius: 15px;
+    padding: 13px;
+    width: 70%;
+    margin-top: 13px;
+    font-family: Dubai;
+}
+
+#loginForm input::placeholder,
+#regForm input::placeholder{
+    font-size: 1.035rem;
+}
+
+#create_account_btn,
+#reg_create_account_btn {
+    margin-top: 15px;
+    border-radius: 15px;
+    background: #84C7AE;
+    border-radius: 23.011px;
+    border: none;
+    height: 12%;
+    width: 60%;
+    color: white;
+    font-family: Dubai;
+    font-weight: 500;
+    font-size: 20px;
+    transition: background-color 0.5s ease;
+}
+
+#create_account_btn:hover,
+#reg_create_account_btn:hover {
+    background: #32403B;
+    cursor: pointer;
+}
+
+#click_login_or_register,
+#reg_click_login_or_register {
+    font-style: italic;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+#already_have_or_register,
+#reg_already_have_or_register{
+    font-family: Dubai;
+    color: #32403B;
+    font-weight: 200;
+    height: 10px;
+    margin: 5px 0px;
+}
+
+#loginForm,
+#regForm {
+    background: whitesmoke;
+    width: 400px;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 5px;
+}

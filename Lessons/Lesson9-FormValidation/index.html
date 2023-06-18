@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Validate Forms</title>
+    <link rel="stylesheet" href="static/styles/reset.css">
+    <link rel="stylesheet" href="static/styles/styles.css">
+</head>
+<body>
+    <form id="loginForm">    
+        <h1 id="top_label">Authentification</h1>
+        <input id="email_address" type="email" placeholder="Email Adress">
+        <input id="password" type="password" placeholder="Password">    
+        <input value="Sign In" id="create_account_btn" type="button">
+        <label id="label_info"> </label>
+        <h5 id="already_have_or_register">
+            <span>Don't have an account?</span>
+            <a id="click_login_or_register">Sign Up</a>
+        </h5>
+    </form>
+    <form id="regForm">    
+        <h1 id="reg_top_label">Registration</h1>
+        <input id="reg_email_address" type="email" placeholder="Email Adress">
+        <input id="reg_login" type="text" placeholder="Login">
+        <input id="reg_password" type="password" placeholder="Password"> 
+        <input id="reg_confirm_password" type="password" placeholder="Confirm Password"> 
+        <input id="reg_phone" type="text" placeholder="Phone Number"> 
+        <input value="Sign Up" id="reg_create_account_btn" type="button">
+        <label id="reg_label_info"> </label>
+        <h5 id="reg_already_have_or_register">
+            <span>Already have an account?</span>
+            <a id="reg_click_login_or_register">Sign In</a>
+        </h5>
+    </form>
+    <script src="static/scripts/validator.js"></script>
+    <script src="static/scripts/validateLoginForm.js"></script>
+    <script src="static/scripts/validateRegisterForm.js"></script>
+</body>
+</html>
