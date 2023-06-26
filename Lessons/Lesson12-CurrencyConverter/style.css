@@ -1,0 +1,91 @@
+html,body{
+    height: 100%;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.currency{
+    max-width: 900px;
+    margin: 0 auto;
+    border: 3px groove lime;
+}
+
+.currency-header{
+    padding: 10px;
+    box-shadow: 0px 0px 12px 4px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0px 0px 12px 4px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 12px 4px rgba(0,0,0,0.75);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.currency-header-text{
+    color: #c79660;
+}
+
+.currency-header-container *{
+    display: inline;
+}
+
+.currency-header-container > h1{
+    margin-left: 10px;
+}
+
+.currency-header-container:first-child > input{
+    position: absolute;
+    top: 5%;
+    right: 7%;
+}
+
+.currency-header-container > i {
+    font-size: 20px;
+}
+
+.currency-header-body{
+    margin: 0 auto;
+}
+
+.currency-header-transferIcon{
+    margin:0 30px;
+}
+
+.currency-calculate-button{
+    border: none;
+    border-radius: 10px;
+    background-color: #c79660;
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 16px;
+    padding: 7px 15px;
+}
+
+.currency-calculate-button:hover{
+    background-color: #9e774d;
+}
+
+.currency-header-footer{
+    margin: 0 auto;
+}
+
+.currency-table-list{
+    width: 100%;
+    border-collapse: collapse;
+    border: 2px solid black;
+    text-align: center;
+}
+
+.currency-table-list th,
+.currency-table-list td {
+    border: 1px solid black;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.currency-table-list tr:hover{
+    background-color: black;
+    color: white;
+}
