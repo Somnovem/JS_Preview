@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Управляемый список продуктов</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md">
+            <h1 class="text-center">Список продуктов</h1>
+            <div class="product-list-container">
+                <div class="product-list-controls">
+                    <form>
+                        <div class="row">
+                            <div class="form-group col-md-6">
+                                <label >Search by Title</label>
+                                <input type="text" class="form-control" placeholder="Search" id="searchKey">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label></label>
+                                <input type="button" class="form-control btn btn-success" value="Search" id="btnSearch">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-5">
+                                <label>Price From</label>
+                                <input type="number" class="form-control" id="priceFrom">
+                            </div>
+                            <div class="form-group col-md-5">
+                                <label>Price To</label>
+                                <input type="number" class="form-control" id="priceTo">
+                            </div>
+                            <div class="form-group col-md-2">
+                                <label></label>
+                                <input type="button" class="form-control btn btn-success" value="Apply" id="btnRangePrice">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-5">
+                                <label>Rating From</label>
+                                <input type="number" class="form-control" id="ratingFrom">
+                            </div>
+                            <div class="form-group col-md-5">
+                                <label>Rating To</label>
+                                <input type="number" class="form-control" id="ratingTo">
+                            </div>
+                            <div class="form-group col-md-2">
+                                <label></label>
+                                <input type="button" class="form-control btn btn-success" value="Apply" id="btnRangeRating">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-5">
+                                <label>Brand</label>
+                                <select id="pickedBrand" class="form-select"></select>
+                            </div>
+                            <div class="form-group col-md-5">
+                                <label>Category</label>
+                                <select id="pickedCategory" class="form-select"></select>
+                            </div>
+                            <div class="form-group col-md-2">
+                                <label></label>
+                                <input type="button" class="form-control btn btn-success" value="Reset" id="btnReset">
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+                <div class="product-list-data mt-5">
+                    <table class="table table-products text-center">
+                        <thead class="thead-dark">
+
+                        </thead>
+                    </table>
+                </div>
+                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary btn-close-modal" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="jquery-3.7.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+<script src="productList.js"></script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Product Modal</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Product Page</h1>
+    <div class="product">
+      <img src="product1.jpg" alt="Product 1">
+      <button class="btn-modal" data-modal-target="#modal1">View Details</button>
+    </div>
+    <div class="product">
+      <img src="product2.jpg" alt="Product 2">
+      <button class="btn-modal" data-modal-target="#modal2">View Details</button>
+    </div>
+  </div>
+
+  <div class="modal" id="modal1">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Product 1</h2>
+      <img src="product1.jpg" alt="Product 1">
+      <p>Description of Product 1.</p>
+    </div>
+  </div>
+
+  <div class="modal" id="modal2">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Product 2</h2>
+      <img src="product2.jpg" alt="Product 2">
+      <p>Description of Product 2.</p>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

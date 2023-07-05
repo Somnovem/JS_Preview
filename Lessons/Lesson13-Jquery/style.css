@@ -1,0 +1,29 @@
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+}
+
+* {
+    margin: 0px;
+    padding: 0px
+}
+
+.selected {
+    background-color: aqua;
+}
+
+
+.player-1{
+    background-image:url(https://celes.club/uploads/posts/2022-11/1667389195_1-celes-club-p-krasnii-krestik-bez-fona-pinterest-1.png);
+}
+
+.player-2{
+    background-image:url(https://img.icons8.com/?size=512&id=0IQZQ1dRTUJD&format=png);
+}
