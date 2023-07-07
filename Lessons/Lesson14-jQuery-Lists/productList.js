@@ -22,7 +22,6 @@ $(() => {
   $.get("https://dummyjson.com/products?skip=0&limit=100", {}).done((data) => {
     if (data != null) {
       responseData.products = data.products;
-      console.log(responseData.products);
       renderTable(responseData.products, $(".table-products"));
       let $buttClose = $("#exampleModal .btn-close-modal");
       $buttClose.on("click", function () {
